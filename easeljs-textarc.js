@@ -24,7 +24,7 @@
         Text.prototype._drawTextLine = function (ctx, text, y) {
             var wordWidth = ctx.measureText(text).width;
             var angle = 2 * Math.asin(wordWidth / ( 2 * this.radius ));
-            //ctx.save();
+            ctx.save();
             ctx.rotate(-1 * angle / 2);
             ctx.rotate(-1 * (angle / text.length) / 2);
             for (var i = 0; i < text.length; i++) {
