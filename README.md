@@ -8,11 +8,10 @@ EaselJs extension allows Text Arc drawing
 ```javascript
 canvas = document.getElementById("canvas");
 var stage = new Stage(canvas);
-var text = new Text("Text Arc", '20pt Arial', '#000');
+var text = new TextArc("Text Arc", '20pt Arial', '#000', 100);
 text.textAlign = "center";
 text.x = 200;
 text.y = 300;
-text.setRadius(100);
 stage.addChild(text);
 stage.update();
 ```
