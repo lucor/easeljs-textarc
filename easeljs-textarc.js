@@ -31,7 +31,6 @@
     TextArc.prototype.initialize = function (text, font, color, radius) {
         this.Text_initialize(text, font, color);
         this.radius = radius;
-        this.textBaseline = "center";
     }
 
     // use the same approach with draw:
@@ -39,7 +38,6 @@
 
     //Override _drawTextLine method
     TextArc.prototype._drawTextLine = function (ctx, text, y) {
-        console.log('call textarc draw' + this.radius);
         var wordWidth = ctx.measureText(text).width;
         var angle = 2 * Math.asin(wordWidth / ( 2 * this.radius ));
         ctx.save();
