@@ -17,7 +17,7 @@
 
 this.createjs=this.createjs||{};
 
-(function (window) {
+(function () {
 
     // define a new TextArc class that extends Text and drawing arc text.
     var TextArc = function (text, font, color, radius) {
@@ -33,6 +33,7 @@ this.createjs=this.createjs||{};
     TextArc.prototype.initialize = function (text, font, color, radius) {
         this.Text_initialize(text, font, color);
         this.radius = radius;
+        this.textBaseline = "center";
     }
 
     // use the same approach with draw:
@@ -56,4 +57,4 @@ this.createjs=this.createjs||{};
     }
 
     createjs.TextArc = TextArc;
-}(window));
+}());
