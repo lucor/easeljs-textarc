@@ -15,6 +15,8 @@
  *
  */
 
+this.createjs=this.createjs||{};
+
 (function (window) {
 
     // define a new TextArc class that extends Text and drawing arc text.
@@ -22,7 +24,7 @@
         this.initialize(text, font, color, radius);
     }
 
-    TextArc.prototype = new Text(); // extend Text.
+    TextArc.prototype = new createjs.Text(); // extend Text.
 
     // save off initialize method from Text so we can call it from our own:
     TextArc.prototype.Text_initialize = TextArc.prototype.initialize;
@@ -53,5 +55,5 @@
         ctx.restore();
     }
 
-    window.TextArc = TextArc;
+    createjs.TextArc = TextArc;
 }(window));
