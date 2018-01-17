@@ -31,7 +31,11 @@ this.createjs=this.createjs||{};
 
     // overwrite Text's initialize method with our own:
     TextArc.prototype.initialize = function (text, font, color, radius) {
-        this.Text_initialize(text, font, color);
+    
+        this.text = text;
+        this.font = font;
+        this.color = color;
+    
         this.radius = radius;
         this.textBaseline = "center";
     }
